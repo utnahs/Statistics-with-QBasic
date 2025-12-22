@@ -1,0 +1,22 @@
+# WAP to find the average of all numbers in a list
+
+def avg(input):
+    len=0
+    sum=0
+    for i in input:
+        len+=1
+        sum+=i
+    return round((sum/len),2)
+
+
+#WAP to find the sample standard deviation of given numbers in list
+def stddev(listt):
+    count=0
+    mean=avg(listt)
+    sq_diff_sum = 0
+    for i in listt:
+        count+=1
+        sq_diff_sum+=(i-mean)**2
+    s=(sq_diff_sum/(count-1))**0.5
+    return s
+stddev([1,2,3,4,5])
